@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   def new
     @comment = Comment.new
-    @comment.topic_id = params[:topic_id]
   end
 
   def create
