@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-　　 <script>
-　　 </script>
-
     <title>Pictgram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
- <body>
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
@@ -31,14 +25,9 @@
               <% end %>
             </li>
             <li>
-              <li>
-              <% if logged_in? %>
-                <%= link_to new_topic_path do %>
-                  <%= image_tag 'icons/camera.png' %>
-                <% end %>
+              <%= link_to new_topic_path do %>
+                <%= image_tag 'icons/camera.png' %>
               <% end %>
-
-              </li>
             </li>
             <li>
               <%= link_to logout_path, method: :delete do %>

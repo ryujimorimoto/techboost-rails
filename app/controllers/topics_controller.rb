@@ -4,21 +4,11 @@ class TopicsController < ApplicationController
   end
 
   def index
-    @topics = Topic.all.includes([:favorite_users, :comment_users])
-  #   @topics = Topic.all.includes(:favorite_users)
-  #   @comments = Comment.all
-
-  # logger.debug("debug1--")
-  # @topics.each do |value|
-  #   p value.comments
-  # end
-  # logger.debug("--debug1")
-
+    @topics = Topic.all.includes(:favorite_users)
   end
 
   def create
     @topic = current_user.topics.new(topic_params)
-
     if @topic.save
       redirect_to topics_path, success: '投稿に成功しました'
     else

@@ -26,15 +26,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem "carrierwave"
 gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 gem 'chromedriver-helper'
-gem 'pry-rails'
-gem 'pry-doc'
-gem 'pry-byebug'
-gem 'pry-stack_explorer'
-gem 'bcrypt'
 
 gem 'capybara', '>= 2.15'
 gem 'selenium-webdriver'
@@ -44,12 +39,14 @@ gem 'selenium-webdriver'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap-sass'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'jquery-ui-rails'
 
 group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
@@ -74,3 +71,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'jquery-ui-rails'
+gem 'bootstrap-sass'
