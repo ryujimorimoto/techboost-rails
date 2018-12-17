@@ -17,8 +17,6 @@ class TopicsController < ApplicationController
   end
 
   def create
-	logger.debug(current_user)
-	puts current_user
     @topic = current_user.topics.new(topic_params)
 
     if @topic.save
